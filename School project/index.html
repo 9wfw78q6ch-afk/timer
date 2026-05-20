@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Study Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Study Timer</h1>
+
+    <section class="timer">
+      <div id="mode">Focus</div>
+      <div id="display">25:00</div>
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="pause" disabled>Pause</button>
+        <button id="reset">Reset</button>
+      </div>
+    </section>
+
+    <section class="presets">
+      <label>Presets:</label>
+      <button class="preset" data-minutes="25">Focus 25</button>
+      <button class="preset" data-minutes="50">Focus 50</button>
+      <button class="preset" data-minutes="5">Short Break 5</button>
+      <button class="preset" data-minutes="15">Long Break 15</button>
+    </section>
+
+    <section class="custom">
+      <label>Custom minutes:</label>
+      <input id="custom-min" type="number" min="1" value="25">
+      <button id="set-custom">Set</button>
+    </section>
+
+    <section class="extras">
+      <button id="notify-toggle">Enable Notifications</button>
+      <label><input id="sound-toggle" type="checkbox" checked> Sound</label>
+    </section>
+
+    <section class="stats">
+      <h2>Stats</h2>
+      <div>Total focus minutes: <span id="total-min">0</span></div>
+      <div>Sessions completed: <span id="sessions-count">0</span></div>
+      <h3>History</h3>
+      <ul id="history"></ul>
+    </section>
+
+    <footer>
+      <small>Local-only app. Works offline in modern browsers.</small>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
